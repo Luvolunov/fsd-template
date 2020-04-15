@@ -1,0 +1,50 @@
+@import "../../vars.scss";
+
+.standart-radio{
+    padding-left: 30px;
+    padding-right: 20px;
+    position: relative;
+
+    &__input{
+        display: none;
+    }
+
+    &__title{
+        color: $dark-50;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid $dark-25;
+            border-radius: 50%;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);;
+            border-radius: 50%;
+            opacity: 0;
+            transition-duration: 0.1s;
+        }
+    }
+
+    &__input:checked + &__title::before{
+        border-color: $purple;
+    }
+
+    &__input:checked + &__title::after{
+        opacity: 1;
+    }
+
+    &__input:checked + &__title{
+        color: $dark-75;
+    }
+
+}
