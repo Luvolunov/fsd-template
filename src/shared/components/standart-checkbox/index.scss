@@ -1,0 +1,47 @@
+@import "../../vars.scss";
+
+.standart-checkbox{
+    padding-left: 30px;
+    position: relative;
+
+    &__input{
+        display: none;
+    }
+
+    &__title{
+        color: $dark-50;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 18px;
+            height: 18px;
+            border: 1px solid $dark-25;
+            border-radius: 4px;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 6px;
+            width: 8px;
+            height: 4px;
+            border: 2px solid $purple;
+            border-top: none;
+            border-right: none;
+            transform: rotate(-45deg);
+            opacity: 0;
+            transition-duration: 0.1s;
+        }
+    }
+
+    &__input:checked + &__title::before{
+        border-color: $purple;
+    }
+
+    &__input:checked + &__title::after{
+        opacity: 1;
+    }
+
+}
