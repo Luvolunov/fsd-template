@@ -1,0 +1,17 @@
+@import "../../vars.scss";
+
+.standart-input{
+    display: block;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 12.5px 15px;
+    width: 100%;
+    max-width: 320px;
+    font-weight: normal;
+    background-color: #fff;
+    border: 1px solid $dark-25;
+    border-radius: 4px;
+    &:hover, &:focus{
+        border-color: $dark-50;
+    }
+}
