@@ -3,5 +3,8 @@ export interface DropdownOptionsModel{
     withActions?: boolean;
 
     // counters object as state
-    counters?: {[key: string]: number}
+    counters?: {[key: string]: {name: string, value: number}};
+
+    // initial string in input
+    viewText?: string;
 }
