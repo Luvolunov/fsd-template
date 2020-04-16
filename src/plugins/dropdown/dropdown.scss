@@ -1,0 +1,143 @@
+@import "../../shared/vars.scss";
+
+.dropdown{
+    max-width: 266px;
+    position: relative;
+
+    &::after{
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid $dark-75;
+        border-left: 2px solid $dark-75;
+        transform: rotate(-135deg);
+        position: absolute;
+        top: 15px;
+        right: 17px;
+    }
+
+    &.open::after{
+        transform: rotate(45deg);
+        top: 20px;
+    }
+
+    &.open &__input{
+        border-color: $dark-50;
+    }
+
+    &.open &__outer-rows{
+        display: block;
+    }
+
+    &.close &__outer-rows{
+       border-color: $dark-25;
+    }
+
+    &__input{
+        display: block;
+        box-sizing: border-box;
+        padding: 12px 40px 13px 15px;
+        width: 100%;
+        border: 1px solid $dark-25;
+        color: $dark-75;
+        border-radius: 2px 2px 0px 0px;
+        cursor: pointer;
+    }
+
+    &__outer-rows{
+        display: none;
+        border: 1px solid $dark-50;
+        border-top: none;
+        border-radius: 0px 0px 2px 2px;
+        padding-top: 5px;
+    }
+
+
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        padding-bottom: 7px;
+    }
+
+    &__lefthand{
+        display: flex;
+        width: 100%;
+        max-width: 160px;
+        padding-right: 14px;
+        padding-left: 14px;
+        padding-top: 6px;
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+        font-variant: small-caps;
+        box-sizing: border-box;
+    }
+
+    &__righthand{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1;
+        padding-top: 1px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    &__text{
+        padding-bottom: 2px;
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    &__btn{
+        display: flex;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $dark-50;
+        border-radius: 50%;
+        color: $dark-50;
+        cursor: pointer;
+        &::-moz-focus-inner{
+            border: 0;
+        }
+        &:focus{
+            outline: none;
+        }
+        &:disabled{
+            border-color: $dark-25;
+            color: $dark-25;
+            cursor: not-allowed;
+        }
+    }
+
+    &__outer-actions{
+        display: flex;
+        justify-content: space-between;
+        padding: 13px 6px 10px 13px;
+    }
+
+    &__clear{
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 14px;
+        color: $dark-50;
+        cursor: pointer;
+        &.hidden{
+            visibility: hidden;
+        }
+    }
+
+    &__apply{
+        font-family: Montserrat;
+        font-weight: bold;
+        font-size: 14px;
+        color: $purple;
+        cursor: pointer;
+    }
+
+}
