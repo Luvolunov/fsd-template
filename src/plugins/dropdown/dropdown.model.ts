@@ -1,30 +1,19 @@
-import { VoidProcedure } from "../../shared/models/void-procedure/void-procedure.model";
+import { Counter } from "./counter.model";
+import { OnChange } from "./onchange-handler.model";
 
 export interface DropdownModel{
     // Status
     isOpen: boolean;
 
     // store of the counters
-    counters: {[key: string]: number};
+    counters: {[key: string]: Counter};
 
-    // set counter at counters
-    setCounter: (key: string) => void;
+    // take hook when values at counters changed
+    onChange: (fn: OnChange) => void;
 
-    // increment of counter
-    inc: (key: string) => void;
+    // take hook when values was cleared
+    onClear: (fn: () => void) => void;
 
-    // decrement of counter
-    dec: (key: string) => void;
-
-    // remove counter at `counters`
-    removeCounter: (key: string) => void;
-
-    // Change Status
-    toggle: VoidProcedure;
-    
-    // clear all values in `counters`
-    clear?: VoidProcedure;
-
-    // here can be request to server, calculating, etc.
-    accept?: VoidProcedure;
+    // take hook when values applied
+    onApply: (fn: OnChange) => void;
 }
