@@ -1,0 +1,13 @@
+.rate-buttons{
+    display: flex;
+    &__item{
+        width: 24px;
+        height: 24px;
+        background: url(./chosen_star.svg) no-repeat 50% 50%;
+        cursor: pointer;
+    }
+
+    &__item.chosen ~ &__item{
+        background-image: url(./star.svg);
+    }
+}
