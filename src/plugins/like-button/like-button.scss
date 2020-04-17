@@ -1,0 +1,23 @@
+@import "../../shared/vars.scss";
+
+.like-button{
+    display: inline-block;
+    padding: 2px 11px 3px 21px;
+    border: 1px solid $dark-25;
+    border-radius: 10px;
+
+    color: $dark-25;
+
+    font-family: Montserrat;
+    font-size: 10px;
+    
+    background: url(./heart.svg) no-repeat 5px 50%;
+
+    cursor: pointer;
+
+    &.liked{
+        border-color: $purple;
+        color: $purple;
+        background-image: url(./heart_liked.svg);
+    }
+}
