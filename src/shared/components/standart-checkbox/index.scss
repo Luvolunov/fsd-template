@@ -54,11 +54,11 @@
         }
     }
 
-    &__input:checked + &__title::before{
+    &__input:checked + &__text::before{
         border-color: $purple;
     }
 
-    &__input:checked + &__title::after{
+    &__input:checked + &__text::after{
         opacity: 1;
     }
 
