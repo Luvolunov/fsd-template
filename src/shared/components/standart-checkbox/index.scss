@@ -1,7 +1,9 @@
 @import "../../vars.scss";
 
 .standart-checkbox{
+    display: block;
     padding-left: 30px;
+    max-width: 200px;
     position: relative;
 
     &__input{
@@ -23,9 +25,9 @@
         &::after{
             content: "";
             position: absolute;
-            left: 5px;
+            left: 6px;
             top: 6px;
-            width: 8px;
+            width: 6px;
             height: 4px;
             border: 2px solid $purple;
             border-top: none;
