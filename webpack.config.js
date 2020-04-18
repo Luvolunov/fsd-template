@@ -18,7 +18,7 @@ module.exports = (env) => {
                                 .map((entry) => 
                                                 new HtmlWebpackPlugin({
                                                     template: `${entry[1]}.pug`,
-                                                    chunks: [entry[0], "assets/fonts"],
+                                                    chunks: [entry[0], "assets/shared"],
                                                     filename: `${entry[0]}/index.html`
                                                 })
                                 );
@@ -27,7 +27,7 @@ module.exports = (env) => {
         mode: isProd ? "production": "development",
         entry: {
             ...entriesForPug,
-            "assets/fonts": "./src/shared/fonts/fonts.scss"
+            "assets/shared": "./src/shared/root/root"
         },
         output: {
             filename: isProd ? "[name]/index.[contenthash].js": "[name]/index.js",

@@ -1,0 +1,33 @@
+@import "../vars.scss";
+
+h1, h2 {
+    font-family: Quicksand; // TODO: add the font to project
+    font-weight: bold;
+    
+}
+
+h1, h2, h3 {
+    color: $dark-100;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+h3 {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+body {
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 14px;
+    color: $dark-75;
+}
