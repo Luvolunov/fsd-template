@@ -1,0 +1,59 @@
+@import "../../vars.scss";
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.pagination{
+    display: flex;
+
+    &__item{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dark-50;
+        border-radius: 50%;
+        text-decoration: none;
+        outline: none;
+        &.current{
+            background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+            color: white;
+        }
+        &.next{
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: url(./arrow.svg) no-repeat 50% 50%;
+            }
+        }
+        &.back{
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background: url(./arrow.svg) no-repeat 50% 50%;
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+}

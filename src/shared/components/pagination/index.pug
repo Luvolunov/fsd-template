@@ -1,0 +1,25 @@
+mixin pagination(options)
+    div.pagination
+        if options.current !== 1
+            a(href=`${options.link}${options.current - 1}`).pagination__item.back
+        if options.current - 2 > 2
+            a(href=options.link + "1").pagination__item 1
+            a.pagination__item ...
+            a(href=`${options.link}${options.current - 2}`).pagination__item #{options.current - 2}
+            a(href=`${options.link}${options.current - 1}`).pagination__item #{options.current - 1}
+        else 
+            - var index = 0
+            while ++index < options.current
+                a(href=`${options.link}${index}`).pagination__item=index
+        a.pagination__item.current #{options.current}
+        if options.max - options.current > 2
+            a(href=`${options.link}${options.current + 1}`).pagination__item #{options.current + 1}
+            a(href=`${options.link}${options.current + 2}`).pagination__item #{options.current + 2}
+            a.pagination__item ...
+            a(href=`${options.link}${options.max}`).pagination__item #{options.max}
+        else 
+            - var index = options.current
+            while ++index < options.max
+                a(href=`${options.link}${index}`)=index
+        if options.current !== options.max
+            a(href=`${options.link}${options.current + 1}`).pagination__item.next
