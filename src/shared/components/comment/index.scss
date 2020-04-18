@@ -1,0 +1,45 @@
+@import "../../vars.scss";
+
+.comment{
+
+    max-width: 713px;
+
+    &__info{
+        display: flex;
+    }
+
+    &__img{
+        max-width: 44px;
+        max-height: 44px;
+        border-radius: 50%;
+        border: 2px solid white;
+        box-shadow: 0px 10px 20px $dark-05;
+    }
+
+    &__right-info{
+        padding-left: 10px;
+        line-height: 171%;
+    }
+
+    &__name{
+        display: block;
+        font-weight: bold;
+        color: $dark-75;
+    }
+
+    &__body{
+        display: flex;
+    }
+
+    &__like-outer{
+        min-width: 55px;
+        padding-top: 12px;
+        padding-left: 3px;
+    }
+
+    &__text{
+        line-height: 171%;
+        padding-top: 10px;
+    }
+
+}

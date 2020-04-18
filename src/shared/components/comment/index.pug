@@ -1,0 +1,12 @@
+mixin comment(options)
+    div.comment 
+        div.comment__info
+            div.comment__left-info
+                img(src=options.src).comment__img
+            div.comment__right-info
+                span.comment__name=options.name
+                span.comment__date=options.date
+        div.comment__body
+            div.comment__like-outer
+                div(data-liked=options.liked, data-likes=options.likes).comment__like-button.js-like-button
+            div.comment__text=options.text
