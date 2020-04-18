@@ -1,0 +1,23 @@
+@import "../../vars.scss";
+
+.advantage{
+
+    display: flex;
+    padding: 21px 0px 20px 0px;
+
+    max-width: 280px;
+
+    border-bottom: 1px solid $dark-05;
+
+    line-height: 171%;
+
+    &__left-hand{
+        padding: 4px 16px 0px 6px;
+    }
+
+    &__title{
+        display: block;
+        color: $dark-75;
+        font-weight: bold;
+    }
+}
