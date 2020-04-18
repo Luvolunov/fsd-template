@@ -2,15 +2,31 @@
 
 .standart-checkbox{
     display: block;
-    padding-left: 30px;
+    padding-left: 31px;
     max-width: 200px;
     position: relative;
+
+    &.rich {
+        max-width: 230px;
+    }
 
     &__input{
         display: none;
     }
 
+    &.rich > &__text {
+        font-size: 12px;
+    }
+
     &__title{
+        display: block;
+        font-weight: bold;
+        font-size: 14px;
+        color: $dark-75;
+        padding: 1px 0px 5px 0px;
+    }
+
+    &__text{
         color: $dark-50;
         &::before{
             content: "";

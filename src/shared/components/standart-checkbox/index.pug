@@ -1,4 +1,6 @@
 mixin standartCheckbox(options)
-    label.standart-checkbox
+    label(class= options.isRich ? "rich": "").standart-checkbox
+        if options.isRich
+            span.standart-checkbox__title=options.title
         input(type="checkbox", checked=options.isChecked, name=options.name).standart-checkbox__input
-        span.standart-checkbox__title=options.title
+        span.standart-checkbox__text=options.text
