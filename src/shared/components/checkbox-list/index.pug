@@ -1,0 +1,11 @@
+include ../standart-checkbox/index
+
+mixin checkboxList(options)
+    label.checkbox-list
+        input(type="checkbox").checkbox-list__controller
+        div.checkbox-list__title
+            h3=options.title
+        div.checkbox-list__list
+            each box in options.list
+                div.checkbox-list__box
+                    +standartCheckbox(box)

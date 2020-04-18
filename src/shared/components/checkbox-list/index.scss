@@ -1,0 +1,48 @@
+@import "../../vars.scss";
+
+.checkbox-list{
+    display: block;
+    max-width: 249px;
+
+    &__controller{
+        display: none;
+    }
+
+    &__controller:checked + &__title::after{
+        transform: rotate(45deg);
+        top: 6px;
+    }
+
+    &__controller:checked ~ &__list{
+        display: block;
+    }
+
+    &__title{
+
+        position: relative;
+        cursor: pointer;
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-top: 2px solid $dark-75;
+            border-left: 2px solid $dark-75;
+            transform: rotate(-135deg);
+            right: 0;
+            top: 2px;
+        }
+    }
+
+    &__list{
+        display: none;
+        padding-top: 18px;
+    }
+
+    &__box{
+        padding-bottom: 12px;
+    }
+
+    
+}
