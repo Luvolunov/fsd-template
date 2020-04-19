@@ -1,0 +1,20 @@
+include ../../components/small-filter-date/index 
+include ../../components/button_arrow/index
+
+mixin searchForm(options)
+    div.search-form.js-search-form
+        h1 Найдём номера под ваши пожелания
+        div.search-form__row
+            div.search-form__hand
+                h3.search-form__title Прибытие
+                +smallFilterDate({})
+            div.search-form__hand
+                h3.search-form__title Выезд
+                +smallFilterDate({})
+        div.search-form__drop-outer 
+            h3.search-form__title Гости
+            div.search-form__dropdown.js-dropdown
+        div.search-form__button-outer
+            +buttonArrow({
+                title: "Подобрать номер"
+            })
