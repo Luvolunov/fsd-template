@@ -15,9 +15,8 @@
     outline: none;
     position: relative;
     z-index: 1;
-    &.disabled{
+    &:hover{
         opacity: 0.5;
-        cursor: default;
     }
     &::after{
         content: "";

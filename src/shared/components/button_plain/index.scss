@@ -13,9 +13,8 @@
     &:focus{
         outline: none;
     }
-    &:disabled{
+    &:hover{
         color: $dark-50;
-        cursor: default;
     }
     &::-moz-focus-inner{
         border: 0;
