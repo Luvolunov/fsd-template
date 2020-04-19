@@ -1,7 +1,7 @@
 @import "../../shared/vars.scss";
 
 .dropdown{
-    max-width: 266px;
+    max-width: 320px;
     position: relative;
 
     &::after{
@@ -50,6 +50,11 @@
         border-top: none;
         border-radius: 0px 0px 2px 2px;
         padding-top: 5px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background-color: white;
     }
 
 
@@ -67,10 +72,6 @@
         padding-right: 14px;
         padding-left: 14px;
         padding-top: 6px;
-        font-family: Montserrat, sans-serif;
-        font-weight: bold;
-        font-size: 12px;
-        font-variant: small-caps;
         box-sizing: border-box;
     }
 
@@ -78,14 +79,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex: 1;
         padding-top: 1px;
         padding-left: 6px;
         padding-right: 6px;
     }
 
     &__text{
-        padding-bottom: 2px;
+        min-width: 32px;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0px 12px 2px;
         font-family: Montserrat, sans-serif;
         font-weight: bold;
         font-size: 12px;
@@ -118,13 +121,14 @@
     &__outer-actions{
         display: flex;
         justify-content: space-between;
-        padding: 13px 6px 10px 13px;
+        padding: 13px 6px 13px 13px;
+        text-transform: uppercase;
     }
 
     &__clear{
         font-family: Montserrat;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 12px;
         color: $dark-50;
         cursor: pointer;
         &.hidden{
@@ -135,7 +139,7 @@
     &__apply{
         font-family: Montserrat;
         font-weight: bold;
-        font-size: 14px;
+        font-size: 12px;
         color: $purple;
         cursor: pointer;
     }

@@ -188,7 +188,7 @@ export class DropdownController implements DropdownModel{
 
     private createRow(key: string, counter: Counter): HTMLDivElement{
         const row = createElement<HTMLDivElement>("div", DROPDOWN_STYLE_CLASSES.row);
-        const lefthand = createElement<HTMLDivElement>("div", DROPDOWN_STYLE_CLASSES.lefthand);
+        const lefthand = createElement<HTMLDivElement>("h3", DROPDOWN_STYLE_CLASSES.lefthand);
         const righthand = createElement<HTMLDivElement>("div", DROPDOWN_STYLE_CLASSES.righthand);
         const btnDec = createElement<HTMLInputElement>("input", DROPDOWN_STYLE_CLASSES.btn);
         const count = createElement<HTMLDivElement>("div", DROPDOWN_STYLE_CLASSES.text);
