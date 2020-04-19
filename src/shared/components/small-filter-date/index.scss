@@ -1,0 +1,38 @@
+@import "../../vars.scss";
+
+.small-filter-date{
+
+    display: block;
+    width: 100%;
+    max-width: 150px;
+
+    position: relative;
+
+    &::after{
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: 2px solid $dark-75;
+        border-left: 2px solid $dark-75;
+        transform: rotate(-135deg);
+        position: absolute;
+        top: 16px;
+        right: 17px;
+    }
+
+    &.open::after{
+        transform: rotate(45deg);
+        top: 20px;
+    }
+
+    &__input{
+        display: block;
+        width: 100%;
+        padding: 7px 15px 10px 13px;
+        color: $dark-75;
+        line-height: 171%;
+        border: 1px solid $dark-25;
+        border-radius: 4px;
+    }
+
+}
