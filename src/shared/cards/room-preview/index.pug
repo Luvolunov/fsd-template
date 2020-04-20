@@ -1,0 +1,24 @@
+include ../../components/rate/index
+
+mixin roomPreview(options)
+    div.room-preview
+        div.room-preview__images-container
+            img(src=options.imageUrl).room-preview__image
+            div.room-preview__image-controllers
+                div.room-preview__image-controller.active
+                div.room-preview__image-controller
+                div.room-preview__image-controller
+                div.room-preview__image-controller
+        div.room-preview__body
+            div.room-preview__info
+                h2.room-preview__number=`№${options.number}`
+                if options.isLux 
+                    h3.room-preview__lux Люкс
+                span.room-preview__price
+                    b=`${options.price}₽`
+                    | в сутки
+            div.room-preview__ratings
+                +rate({
+                    chosen: options.rating
+                })
+                span.room-preview__reviews=`${options.reviews} Отзывов`
