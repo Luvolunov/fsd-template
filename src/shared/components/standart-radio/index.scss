@@ -11,6 +11,7 @@
 
     &__title{
         color: $dark-50;
+        letter-spacing: 0.72px;
         &::before{
             content: "";
             position: absolute;
