@@ -1,0 +1,37 @@
+include ../../components/small-filter-date/index
+include ../../components/button_arrow/index 
+
+mixin order(options)
+    div.order.js-order
+        div.order__info
+            h2.order__number=`№${options.number}`
+            if options.isLux 
+                    h3.order__lux Люкс
+            span.order__price
+                b=`${options.price}₽ `
+                | в сутки
+        div.order__date-group
+            div.order__date-hand
+                h3.order__title Прибытие
+                +smallFilterDate({})
+            div.order__date-hand
+                h3.order__title Выезд
+                +smallFilterDate({})
+        div.order__dropdown-outer
+            h3.order__title Гости
+            div.order__dropdown.js-dropdown
+        div.order__services
+            each service in options.services
+                div.order__service
+                    span.order__left-hand=service.name
+                    span.order__right-hand=`${service.price}₽`
+        div.order__total
+            h2 Итого
+            div.order__dotted-line
+            h2=`${options.total}₽`
+        div.order__submit-outer 
+            +buttonArrow({
+                title: "Забронировать"
+            })
+        
+        
