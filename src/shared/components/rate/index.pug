@@ -1,0 +1,7 @@
+mixin rate(options)
+    - var count = (options.count || 5) + 1;
+    - var n = 0;
+    - var chosen = options.chosen || 1;
+    div.rate-buttons
+        while ++n < count
+            div(class=(n === chosen ? "chosen": "")).rate-buttons__item
