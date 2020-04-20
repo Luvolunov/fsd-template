@@ -1,0 +1,59 @@
+include ../../components/standart-input/index
+include ../../components/standart-radio/index
+include ../../components/toggle-button/index
+include ../../components/button_arrow/index
+include ../../components/button_bg_white/index
+
+mixin signUpForm(options)
+    div.sign-up-form
+        h1.sign-up-form__header Регистрация аккаунта
+        div.sign-up-form__input-outer
+            +standartInput({
+                name: "firstName",
+                placeholder: "Имя"
+            })
+        div.sign-up-form__input-outer
+            +standartInput({
+                name: "lastName",
+                placeholder: "Фамилия"
+            })
+        div.sign-up-form__radio-outer
+            +standartRadio({
+                checked: true,
+                name: "sex",
+                title: "Мужчина"
+            })
+            +standartRadio({
+                checked: false,
+                name: "sex",
+                title: "Женщина"
+            })
+        div.sign-up-form__group
+            h3 Дата рождения
+            +standartInput({
+                placeholder: "ДД.ММ.ГГГГ"
+            })
+        div.sign-up-form__credentials
+            h3 Данные для входа в сервис
+            div.sign-up-form__email
+                +standartInput({
+                    name: "email",
+                    placeholder: "Email"
+                })
+            div.sign-up-form__password
+                +standartInput({
+                    name: "password",
+                    placeholder: "Пароль"
+                })
+        +toggleButton({
+            title: "Получать спецпредложения"
+        })
+        div.sign-up-form__submit-outer
+            +buttonArrow({
+                title: "Перейти к оплате"
+            })
+        div.sign-up-form__help
+            span.sign-up-form__text Уже есть аккаунт на Toxin
+            +buttonBgWhite({
+                title: "Войти"
+            })
