@@ -1,0 +1,26 @@
+include ../../components/standart-input/index 
+include ../../components/button_arrow/index
+include ../../components/button_bg_white/index
+
+mixin signInForm(options)
+    div.sign-in-form
+        h1 Войти
+        div.sign-in-form__email
+            +standartInput({
+                name: "email",
+                placeholder: "Email"
+            })
+        div.sign-in-form__password
+            +standartInput({
+                type: "password",
+                name: "password",
+                placeholder: "Пароль"
+            })
+        +buttonArrow({
+            title: "Войти"
+        })
+        div.sign-in-form__help
+            span.sign-in-form__text Нет аккаунта на Toxin?
+            +buttonBgWhite({
+                title: "Создать"
+            })
