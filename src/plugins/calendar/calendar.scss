@@ -1,0 +1,111 @@
+@import "../../shared/vars.scss";
+
+.calendar{
+    width: 100%;
+    max-width: 320px;
+    background: #FFFFFF;
+    border: 1px solid $dark-25;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px $dark-05;
+    border-radius: 4px;
+    padding: 20px 19px;
+
+    &__info{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left-arrow,
+    &__right-arrow{
+        width: 24px;
+        height: 24px;
+        background: 50% 50% no-repeat;
+        cursor: pointer;
+    }
+
+    &__left-arrow{
+        background-image: url(./left-arrow.svg);
+    }
+
+    &__right-arrow{
+        background-image: url(./right-arrow.svg);
+    }
+
+    &__week-days-outer{
+        padding-top: 28px;
+        display: flex;
+    }
+
+    &__week-day{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $purple;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    &__days-block{
+        display: flex;
+        flex-wrap: wrap;
+        color: $dark-50;
+        user-select: none;
+    }
+
+    &__day{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &.disabled{
+            color: $dark-25;
+        }
+        &.current{
+            border-radius: 50%;
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            color: white;
+        }
+        &.chosen{
+            border-radius: 50%;
+            background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+            color: white;
+            position: relative;
+            z-index: 50;
+            &.first::after{
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 50%;
+                background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+                opacity: 0.5;
+                z-index: -1;
+            }
+            &.second::before{
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 50%;
+                background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+                opacity: 0.5;
+                z-index: -1;
+            }
+        }
+        &.gap{
+            background: linear-gradient(180deg, $purple 0%, #8BA4F9 100%);
+            opacity: 0.5;
+        }
+    }
+
+    &__day.current ~ &__day:not(.disabled) {
+        cursor: pointer;
+    }
+
+}
