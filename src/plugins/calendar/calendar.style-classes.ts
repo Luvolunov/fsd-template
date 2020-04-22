@@ -6,5 +6,8 @@ export const CALENDAR_STYLE_CLASSES = {
     block: "calendar__days-block",
     day: "calendar__day",
     weekDay: "calendar__week-day",
-    weekDaysOuter: "calendar__week-days-outer"
+    weekDaysOuter: "calendar__week-days-outer",
+    actionsOuter: "calendar__actions-outer",
+    clear: "calendar__clear",
+    apply: "calendar__apply"
 }
