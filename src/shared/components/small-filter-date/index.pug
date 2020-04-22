@@ -1,3 +1,6 @@
 mixin smallFilterDate(options)
     label.small-filter-date
-        input(readonly="", value=options.value || "ДД.ММ.ГГГГ").small-filter-date__input
+        input(readonly="", 
+              value=options.value || "ДД.ММ.ГГГГ", 
+              data-calendar-toggle="", 
+              class=options.class).small-filter-date__input
