@@ -7,10 +7,15 @@ mixin searchForm(options)
         div.search-form__row
             div.search-form__hand
                 h3.search-form__title Прибытие
-                +smallFilterDate({})
+                +smallFilterDate({
+                    class: "js-calendar-from"
+                })
             div.search-form__hand
                 h3.search-form__title Выезд
-                +smallFilterDate({})
+                +smallFilterDate({
+                    class: "js-calendar-to"
+                })
+        div.js-calendar
         div.search-form__drop-outer 
             h3.search-form__title Гости
             div.search-form__dropdown.js-dropdown

@@ -13,10 +13,15 @@ mixin order(options)
         div.order__date-group
             div.order__date-hand
                 h3.order__title Прибытие
-                +smallFilterDate({})
+                +smallFilterDate({
+                    class: "js-calendar-from"
+                })
             div.order__date-hand
                 h3.order__title Выезд
-                +smallFilterDate({})
+                +smallFilterDate({
+                    class: "js-calendar-to"
+                })
+        div.js-calendar
         div.order__dropdown-outer
             h3.order__title Гости
             div.order__dropdown.js-dropdown
