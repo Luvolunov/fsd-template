@@ -94,7 +94,10 @@ module.exports = (env) => {
             new CleanWebpackPlugin()
         ],
         resolve: {
-            extensions: [".ts", ".js"]
+            extensions: [".ts", ".js"],
+            alias: {
+                shared: path.resolve(__dirname, "./src/shared")
+            }
         }
     }
     return config;
