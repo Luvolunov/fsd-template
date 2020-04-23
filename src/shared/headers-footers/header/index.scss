@@ -1,0 +1,37 @@
+@import "../../vars.scss";
+
+.header{
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px $dark-05;
+    padding: 0 20px;
+
+    &__logo{
+        padding: 15px 0px;
+    }
+
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+
+    &__nav{
+        display: flex;
+        align-items: center;
+    }
+
+    &__button-outer{
+        margin-left: 20px;
+        &.first{
+            margin-left: 30px;
+        }
+    }
+
+    &__name{
+        padding-left: 30px;
+        margin-left: 30px;
+        border-left: 1px solid $dark-05;
+    }
+}

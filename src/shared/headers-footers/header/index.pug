@@ -1,0 +1,51 @@
+include ../../components/button_bg_white/index
+include ../../components/button_bg_gradient/index
+include ../../components/menu/index
+
+mixin header(options)
+    header.header 
+        div.header__inner
+            div.header__logo 
+                img(src=require("shared/images/logo.svg").default)
+            div.header__nav
+                +menu({
+                    items: [
+                        {
+                            title: "Home",
+                            href: "#",
+                            type: "active"
+                        },
+                        {
+                            title: "About Us",
+                            href: "#"
+                        },
+                        {
+                            title: "Services",
+                            href: "#",
+                            type: "list"
+                        },
+                        {
+                            title: "Careers",
+                            href: "#"
+                        },
+                        {
+                            title: "News",
+                            href: "#"
+                        },
+                        {
+                            title: "Documentation",
+                            href: "#"
+                        },
+                    ]
+                })
+                if options.isLoggedIn
+                    div.header__name Cosmin Negoita
+                else
+                    div.header__button-outer.first
+                        +buttonBgWhite({
+                            title: "Login"
+                        })
+                    div.header__button-outer 
+                        +buttonBgGradient({
+                            title: "Register"
+                        })
