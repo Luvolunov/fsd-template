@@ -28,5 +28,8 @@
             font-weight: bold;
             color: $dark-75;
         }
+        &:last-child{
+            margin-right: 0;
+        }
     }
 }
