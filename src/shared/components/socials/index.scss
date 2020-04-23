@@ -1,0 +1,13 @@
+
+.socials{
+
+    display: inline-flex;
+
+    &__image-outer{
+        margin-right: 22px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+}
