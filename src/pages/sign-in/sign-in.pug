@@ -1,1 +1,7 @@
 extends ../../shared/root/root.pug
+
+include ../../shared/cards/sign-in-form/index
+
+block content
+    div.sign-in-outer
+        +signInForm({})
