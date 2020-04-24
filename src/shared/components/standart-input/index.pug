@@ -1,2 +1,6 @@
 mixin standartInput(options)
-    input(placeholder=options.placeholder, name=options.name, type=options.type || "text").standart-input
+    if options.withArrow 
+        label.standart-input-outer
+            input(placeholder=options.placeholder, name=options.name, type=options.type || "text").standart-input
+    else 
+        input(placeholder=options.placeholder, name=options.name, type=options.type || "text").standart-input

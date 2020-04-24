@@ -1,5 +1,20 @@
 @import "../../vars.scss";
 
+.standart-input-outer{
+    display: block;
+    max-width: 260px;
+    position: relative;
+    &::after{
+        content: "";
+        width: 44px;
+        height: 44px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url(../../images/right-arrow.svg) no-repeat 50% 50%;
+    }
+}
+
 .standart-input{
     display: block;
     box-sizing: border-box;
