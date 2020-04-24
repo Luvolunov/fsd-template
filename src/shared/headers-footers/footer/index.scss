@@ -1,0 +1,91 @@
+@import "../../vars.scss";
+
+.footer{
+    background: #FFFFFF;
+    &__inner,
+    &__lower{
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+    &__upper{
+        padding: 100px 20px;
+        border-bottom: 1px solid $dark-05;
+        @media screen and (max-width: $small-desktop){
+            border-bottom: none;
+            padding: 100px 0 0 0;
+
+        }
+    }
+    &__inner{
+        display: flex;
+        @media screen and (max-width: $small-desktop){
+            &{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+    }
+    &__lower{
+        padding: 24px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: $small-desktop){
+            padding: 30px 0 110px;
+            justify-content: center;
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        max-width: 260px;
+        margin-right: 40px;
+        @media screen and (max-width: $small-desktop){
+            &{
+                max-width: 600px;
+                margin-right: 0;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+    &__logo{
+        margin-bottom: 17px;
+    }
+    &__col{
+        width: 100%;
+        max-width: 150px;
+        margin-right: 50px;
+        @media screen and (max-width: $small-desktop){
+            &{
+                display: none;
+            }
+        }
+    }
+    &__subscribe{
+        @media screen and (max-width: $small-desktop){
+            &{
+                display: none;
+            }
+        }
+    }
+    
+    &__title{
+        margin-bottom: 15px;
+    }
+    &__text{
+        display: block;
+        margin-bottom: 21px;
+    }
+
+    &__copyright{
+        @media screen and (max-width: $small-desktop){
+            &{
+                display: none;
+            }
+        }
+    }
+}

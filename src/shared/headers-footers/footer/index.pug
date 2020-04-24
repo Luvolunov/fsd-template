@@ -1,0 +1,87 @@
+include ../../components/socials/index
+include ../../components/menu/index
+include ../../components/standart-input/index
+
+mixin footer(options)
+    footer.footer
+        div.footer__upper
+            div.footer__inner
+                div.footer__info 
+                    div.footer__logo 
+                        img(src=require("shared/images/logo.svg").default)
+                    span Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                div.footer__col 
+                    h3.footer__title Navigation 
+                    +menu({
+                        isVertical: true,
+                        items: [
+                            {
+                                title: "About Us",
+                                href: "#"
+                            },
+                            {
+                                title: "News",
+                                href: "#"
+                            },
+                            {
+                                title: "Support",
+                                href: "#"
+                            },
+                            {
+                                title: "Products",
+                                href: "#"
+                            }
+                        ]
+                    })
+                div.footer__col 
+                    h3.footer__title About Us 
+                    +menu({
+                        isVertical: true,
+                        items: [
+                            {
+                                title: "Who we are",
+                                href: "#"
+                            },
+                            {
+                                title: "Our team",
+                                href: "#"
+                            },
+                            {
+                                title: "Careers",
+                                href: "#"
+                            },
+                            {
+                                title: "Investors",
+                                href: "#"
+                            }
+                        ]
+                    })
+                div.footer__col 
+                    h3.footer__title Support 
+                    +menu({
+                        isVertical: true,
+                        items: [
+                            {
+                                title: "Documentation",
+                                href: "#"
+                            },
+                            {
+                                title: "Community",
+                                href: "#"
+                            },
+                            {
+                                title: "Get in Touch",
+                                href: "#"
+                            }
+                        ]
+                    })
+                div.footer__subscribe 
+                    h3.footer__title Subscribe to our newsletter
+                    span.footer__text Receive our latest news and promotions in your inbox!
+                    +standartInput({
+                        withArrow: true,
+                        placeholder: "Your email address"
+                    })
+        div.footer__lower
+            span.footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+            +socials({})
