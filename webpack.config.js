@@ -79,7 +79,12 @@ module.exports = (env) => {
                         loader: "file-loader",
                         options: {
                             outputPath: "assets/images",
-                            publicPath: "../assets/images",
+                            publicPath: (fn, ap, dn) => {
+                                if (/standart-input/.test(ap)) {
+                                    return "../images/" + fn
+                                }
+                                return "../assets/images/" + fn
+                            },
                             filename: "[name].[ext]"
                         }
                     }
