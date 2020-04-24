@@ -1,4 +1,4 @@
 mixin menu(options)
-    div.menu
+    div(class=options.isVertical ? "vertical": "").menu
         each item in options.items 
             a(href=item.href, class=item.type).menu__item=item.title
