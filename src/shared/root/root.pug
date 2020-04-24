@@ -1,0 +1,14 @@
+include ../headers-footers/header/index
+include ../headers-footers/footer/index
+
+head
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    meta(charset="utf-8")
+    meta(name="theme-color" content="#BC9CFF")
+body 
+    div.root
+        +header({})
+        main.main
+            block content
+        +footer({})
