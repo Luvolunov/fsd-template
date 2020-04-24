@@ -12,31 +12,27 @@ mixin header(options)
                     +menu({
                         items: [
                             {
-                                title: "Home",
-                                href: "#",
-                                type: "active"
-                            },
-                            {
-                                title: "About Us",
+                                title: "О нас",
                                 href: "#"
                             },
                             {
-                                title: "Services",
+                                title: "Услуги",
                                 href: "#",
                                 type: "list"
                             },
                             {
-                                title: "Careers",
+                                title: "Вакансии",
                                 href: "#"
                             },
                             {
-                                title: "News",
+                                title: "Новости",
                                 href: "#"
                             },
                             {
-                                title: "Documentation",
-                                href: "#"
-                            },
+                                title: "Соглашения",
+                                href: "#",
+                                type: "list"
+                            }
                         ]
                     })
                 if options.isLoggedIn
@@ -44,9 +40,9 @@ mixin header(options)
                 else
                     div.header__button-outer.first
                         +buttonBgWhite({
-                            title: "Login"
+                            title: "Войти"
                         })
                     div.header__button-outer 
                         +buttonBgGradient({
-                            title: "Register"
+                            title: "Зарегистрироваться"
                         })

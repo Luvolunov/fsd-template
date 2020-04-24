@@ -9,79 +9,79 @@ mixin footer(options)
                 div.footer__info 
                     div.footer__logo 
                         img(src=require("shared/images/logo.svg").default)
-                    span Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+                    span Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
                 div.footer__col 
-                    h3.footer__title Navigation 
+                    h3.footer__title навигация 
                     +menu({
                         isVertical: true,
                         items: [
                             {
-                                title: "About Us",
+                                title: "О нас",
                                 href: "#"
                             },
                             {
-                                title: "News",
+                                title: "Новости",
                                 href: "#"
                             },
                             {
-                                title: "Support",
+                                title: "Служба поддержки",
                                 href: "#"
                             },
                             {
-                                title: "Products",
+                                title: "Услуги",
                                 href: "#"
                             }
                         ]
                     })
                 div.footer__col 
-                    h3.footer__title About Us 
+                    h3.footer__title о нас 
                     +menu({
                         isVertical: true,
                         items: [
                             {
-                                title: "Who we are",
+                                title: "О сервисе",
                                 href: "#"
                             },
                             {
-                                title: "Our team",
+                                title: "Наша команда",
                                 href: "#"
                             },
                             {
-                                title: "Careers",
+                                title: "Вакансии",
                                 href: "#"
                             },
                             {
-                                title: "Investors",
+                                title: "Инвесторы",
                                 href: "#"
                             }
                         ]
                     })
                 div.footer__col 
-                    h3.footer__title Support 
+                    h3.footer__title Служба поддержки 
                     +menu({
                         isVertical: true,
                         items: [
                             {
-                                title: "Documentation",
+                                title: "Соглашения",
                                 href: "#"
                             },
                             {
-                                title: "Community",
+                                title: "Сообщества",
                                 href: "#"
                             },
                             {
-                                title: "Get in Touch",
+                                title: "Связь с нами",
                                 href: "#"
                             }
                         ]
                     })
                 div.footer__subscribe 
-                    h3.footer__title Subscribe to our newsletter
-                    span.footer__text Receive our latest news and promotions in your inbox!
+                    h3.footer__title Подписка
+                    span.footer__text Получайте специальные предложения и новости сервиса
                     +standartInput({
                         withArrow: true,
                         placeholder: "Your email address"
                     })
         div.footer__lower
-            span.footer__copyright Copyright © 2018 Toxin UI Kit. All rights reserved.
+            span.footer__copyright Copyright © 2018 Toxin отель. Все права зачищены.
             +socials({})
