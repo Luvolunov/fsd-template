@@ -15,11 +15,21 @@
         align-items: center;
         max-width: 1160px;
         margin: 0 auto;
+        flex-wrap: wrap;
+        @media screen and (max-width: $tablet-size){
+            &{
+                flex-direction: column;
+            }
+        }
     }
 
     &__nav{
         display: flex;
         align-items: center;
+    }
+
+    &__menu-outer{
+        padding: 23px 0;
     }
 
     &__button-outer{
@@ -33,5 +43,10 @@
         padding-left: 30px;
         margin-left: 30px;
         border-left: 1px solid $dark-05;
+        @media screen and (max-width: $tablet-size){
+            &{
+                display: none;
+            }
+        }
     }
 }
