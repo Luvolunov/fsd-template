@@ -1,1 +1,7 @@
 extends ../../shared/root/root.pug
+
+include ../../shared/cards/sign-up-form/index
+
+block content 
+    div.sign-up-outer
+        +signUpForm({})
