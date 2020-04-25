@@ -106,8 +106,6 @@ export class DropdownController implements DropdownModel{
             } 
         }
 
-        
-
         root.appendChild(dropdown);
 
     }
@@ -131,7 +129,7 @@ export class DropdownController implements DropdownModel{
                 valueController.textContent = String(value - 1);
             }
             this.changeValue && this.changeValue(this.counters);
-            if (this.isEmpty) {
+            if (this.isEmpty && this._clearBtn) {
                 this._clearBtn.classList.add("hidden")
             } 
 
@@ -151,7 +149,7 @@ export class DropdownController implements DropdownModel{
             }
 
             this.changeValue && this.changeValue(this.counters);
-            this._clearBtn.classList.remove("hidden");
+            this._clearBtn && this._clearBtn.classList.remove("hidden");
         } else if (element.hasAttribute("data-clear")) {
             for (let prop in this._counters){
 

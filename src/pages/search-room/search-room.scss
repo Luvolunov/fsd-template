@@ -1,0 +1,135 @@
+@import "../../shared/vars.scss";
+
+.search-room{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 25px 0 70px;
+    display: flex;
+
+    &__filter{
+        max-width: 266px;
+        margin-right: 60px;
+        @media screen and (max-width: $small-desktop){
+            &{
+                display: none;
+            }
+        }
+        
+    }
+
+    &__title {
+        padding-bottom: 1px;
+    }
+
+    &__outer-date{
+        margin-bottom: 16px;
+    }
+
+    &__group-row{
+        margin-bottom: 25px;
+    }
+
+    &__group-slider{
+        margin-bottom: 19px;
+    }
+
+    &__checkboxes-outer{
+        margin-top: 12px;
+        margin-bottom: 24px;
+    }
+
+    &__checkbox-outer{
+        margin-bottom: 14px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    &__rich-checkboxes-outer{
+        margin-top: 12px;
+        margin-bottom: 23px;
+    }
+
+    &__rich-checkbox{
+        margin-bottom: 7px;
+    }
+
+    &__double-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text{
+        font-size: 12px;
+        color: $dark-50;
+    }
+
+    &__slider{
+        padding: 19px 0 10px;
+    }
+
+    &__dropdown{
+        margin-bottom: 25px;
+    }
+
+    &__main{
+        padding-top: 5px;
+        @media screen and (max-width: $small-desktop){
+            &{
+                text-align: center;
+            }
+        }
+    }
+
+    &__rooms-list{
+        margin-top: 21px;
+        display: flex;
+        flex-wrap: wrap;
+        @media screen and (max-width: $small-desktop){
+            &{
+                justify-content: center;
+            }
+        }
+    }
+
+    &__preview{
+        margin-right: 12px;
+        margin-bottom: 19px;
+        &:nth-child(3n){
+            margin-right: 0;
+        }
+        @media screen and (max-width: $small-desktop){
+            &{
+                &:nth-child(3n){
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        @media screen and (max-width: $medium-tablet){
+            &{
+                &:nth-child(2n){
+                    margin-right: 0;
+                }
+            }
+        }
+
+        @media screen and (max-width: $smartphone){
+            &{
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 22px;
+    }
+
+    &__pagination-outer{
+        margin-left: -15px;
+    }
+}

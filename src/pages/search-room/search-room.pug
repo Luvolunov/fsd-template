@@ -1,1 +1,100 @@
 extends ../../shared/root/root.pug
+
+include ../../shared/components/big-filter-date/index 
+include ../../shared/components/standart-checkbox/index
+include ../../shared/components/checkbox-list/index
+include ../../shared/cards/room-preview/index
+include ../../shared/components/pagination/index
+
+block content 
+    div.search-room
+        div.search-room__filter.js-room-filter
+            div.search-room__outer-date
+                h3.search-room__title Даты пребывания в отеле
+                +bigFilterDate({
+                    value: "19 авг - 23 авг"
+                })
+                div.js-calendar
+            div.search-room__group-row
+                h3 Гости
+                div.js-dropdown-men
+            div.search-room__group-slider
+                div.search-room__double-title 
+                    h3 Диапазон цены
+                    span.search-room__text 5000₽ - 10000₽
+                div.search-room__slider.js-range-slider 
+                div.search-room__text Стоимость за сутки пребывания в номере
+            h3 Checkbox buttons
+            div.search-room__checkboxes-outer 
+                div.search-room__checkbox-outer
+                    +standartCheckbox({
+                        text: "Можно курить"
+                    })
+                div.search-room__checkbox-outer
+                    +standartCheckbox({
+                        text: "Можно с питомцами"
+                    })
+                div.search-room__checkbox-outer
+                    +standartCheckbox({
+                        text: "Можно пригласить гостей (до 10 человек)"
+                    })
+            h3 Доступность
+            div.search-room__rich-checkboxes-outer 
+                div.search-room__rich-checkbox 
+                    +standartCheckbox({
+                        isRich: true,
+                        title: "Широкий коридор",
+                        text: "Ширина коридоров в номере не менее 91 см."
+                    })
+                div.search-room__rich-checkbox 
+                    +standartCheckbox({
+                        isRich: true,
+                        title: "Помощник для инвалидов",
+                        text: "На 1 этаже вас встретит специалист  и проводит до номера."
+                    })
+            h3 Удобства номера
+            div.search-room__dropdown.js-dropdown-room
+            div.search-room__checkbox-list 
+                +checkboxList({
+                    title: "Дополнительные удобства",
+                    list: [
+                        {
+                            text: "Завтрак"
+                        },
+                        {
+                            text: "Письменный стол"
+                        },
+                        {
+                            text: "Стул для кормления"
+                        },
+                        {
+                            text: "Кроватка"
+                        },
+                        {
+                            text: "Телевизор"
+                        },
+                        {
+                            text: "Шампунь"
+                        }
+                    ]
+                })
+        div.search-room__main
+            h1 Номера, которые мы для вас подобрали
+            div.search-room__rooms-list
+                - var n = 13
+                while --n > 0
+                    div.search-room__preview
+                        +roomPreview({
+                            imageUrl: require("shared/images/room_1.png").default,
+                            isLux: true,
+                            number: 888,
+                            price: 9900,
+                            rating: 5,
+                            reviews: 145
+                        })
+            div.search-room__pagination 
+                div.search-room__pagination-outer
+                    +pagination({
+                        current: 1,
+                        max: 15
+                    })           

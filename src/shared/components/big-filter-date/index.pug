@@ -1,3 +1,6 @@
 mixin bigFilterDate(options)
     label.big-filter-date
-        input(readonly="", value=options.value || "ДД.ММ.ГГГГ").big-filter-date__input
+        input(
+            readonly="", 
+            value=options.value || "ДД.ММ.ГГГГ"
+            data-calendar-toggle="").big-filter-date__input

@@ -23,11 +23,11 @@
         font-weight: bold;
         font-size: 14px;
         color: $dark-75;
-        padding: 1px 0px 5px 0px;
     }
 
     &__text{
         color: $dark-50;
+        line-height: 129%;
         &::before{
             content: "";
             position: absolute;
