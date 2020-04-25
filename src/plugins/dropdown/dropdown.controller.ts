@@ -161,6 +161,7 @@ export class DropdownController implements DropdownModel{
             }
             this._clearBtn.classList.add("hidden");
             this.clearValue && this.clearValue();
+            this.changeValue && this.changeValue(this.counters);
         } else if (element.hasAttribute("data-apply")){
             // some code, request, etc
             this.toggle()

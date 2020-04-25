@@ -1,3 +1,7 @@
 extends ../../shared/root/root.pug
 
+include ../../shared/cards/search-form/index
+
 block content 
+    div.landing 
+        +searchForm({})

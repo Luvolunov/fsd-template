@@ -12,7 +12,7 @@
     &__row{
         display: flex;
         justify-content: space-between;
-        padding: 20px 0px;
+        padding: 15px 0px 5px;
     }
 
     
@@ -21,7 +21,11 @@
     }
 
     &__title{
-        padding-bottom: 6px;
+        padding-bottom: 2px;
+    }
+
+    &__drop-outer{
+        padding-top: 10px;
     }
 
     &__button-outer{

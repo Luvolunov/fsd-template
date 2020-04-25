@@ -1,0 +1,18 @@
+@import "../../shared/vars.scss";
+
+.landing{
+    min-height: 830px;
+    background: url(../../shared/images/landing-bg.png) 50% 50% no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+    padding-left: 140px;
+    box-sizing: border-box;
+    @media screen and (max-width: $small-tablet){
+        &{
+            padding: 70px 0 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    }
+}
