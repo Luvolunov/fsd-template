@@ -1,0 +1,170 @@
+@import "../../shared/vars.scss";
+
+
+.room-details{
+
+
+
+    &__images{
+        display: flex;
+        height: 100%;
+        max-height: 485px;
+        @media screen and (max-width: $tablet-size){
+            &{
+                height: auto;
+            }
+        }
+    }
+
+    &__images-list{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        width: 100%;
+        @media screen and (max-width: $standart){
+            &{
+                display: none;
+            }
+        }
+    }
+
+    &__img{
+        flex: 1;
+        overflow: hidden;
+        img {
+            min-width: 100%;
+            min-height: 100%;
+        }
+    }
+
+    &__preview {
+        @media screen and (max-width: $standart){
+            &{
+                overflow: hidden;
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+
+    &__main {
+        display: flex;
+        padding: 70px 0;
+        max-width: 1160px;
+        margin: 0 auto; 
+
+        @media screen and (max-width: $standart){
+            &{
+                flex-direction: column-reverse;
+                padding: 0px 20px;
+            }
+        }
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 710px;
+        @media screen and (max-width: $standart){
+            &{
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__order{
+        flex: 1;
+        padding-left: 68px;
+        padding-top: 50px;
+        @media screen and (max-width: $standart){
+            &{
+                padding-left: 0;
+            }
+        }
+    }
+
+    &__order-outer{
+        margin: 0 auto 50px;
+        max-width: 380px;
+
+    }
+
+    &__row-info{
+        display: flex;
+        margin-bottom: 10px;
+        @media screen and (max-width: $small-tablet){
+            &{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+        }
+    }
+
+    &__hand{
+        &:first-child{
+            margin-right: 100px;
+            @media screen and (max-width: $small-tablet){
+                &{
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__double-title{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__comments{
+        margin-top: 19px;
+    }
+
+    &__comment{
+        margin-bottom: 23px;
+        &:last-child{
+            margin: 0;
+        }
+    }
+
+    &__bullets{
+        display: flex;
+        margin-top: 33px;
+        @media screen and (max-width: $small-tablet){
+            &{
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__bullet-left-hand{
+        flex: 1;
+    }
+
+    &__bullet-right-hand{
+        flex: 1;
+        margin-left: 6px;
+    }
+
+    &__bullet-text{
+        display: block;
+        max-width: 340px;
+        margin-top: 18px;
+    }
+
+    &__text{
+        line-height: 171%;
+    }
+
+    &__bullet-title{
+        margin-left: 19px;
+    }
+
+    &__bullet-list{
+        margin-top: 18px;
+        margin-left: -5px;
+    }
+}

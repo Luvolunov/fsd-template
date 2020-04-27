@@ -1,8 +1,8 @@
 @import "../../shared/vars.scss";
 
 .like-button{
-    display: inline-block;
-    padding: 2px 11px 3px 21px;
+    display: inline;
+    padding: 2px 9px 3px 19px;
     border: 1px solid $dark-25;
     border-radius: 10px;
 
@@ -11,7 +11,7 @@
     font-family: Montserrat;
     font-size: 10px;
     
-    background: url(./heart.svg) no-repeat 5px 50%;
+    background: url(./heart.svg) no-repeat 3px 50%;
 
     cursor: pointer;
 

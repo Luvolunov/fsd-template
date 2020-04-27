@@ -12,7 +12,7 @@ export class LikeButtonController implements LikeButtonModel{
 
     private like: (likes: number) => void;
     private cancel: (likes: number) => void;
-    private countController: HTMLDivElement;
+    private countController: HTMLSpanElement;
 
     get liked(){
         return this._liked;
@@ -41,7 +41,7 @@ export class LikeButtonController implements LikeButtonModel{
 
     constructor(root: HTMLDivElement, options?: LikeButtonOptionsModel){
         const likeBtn = createElement<HTMLDivElement>("div", LIKE_BUTTON_STYLE_CLASSES.likeBtn);
-        const count = createElement<HTMLDivElement>("div", LIKE_BUTTON_STYLE_CLASSES.count);
+        const count = createElement<HTMLSpanElement>("span", LIKE_BUTTON_STYLE_CLASSES.count);
 
         this.likeBtn = likeBtn;
 

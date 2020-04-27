@@ -1,1 +1,103 @@
 extends ../../shared/root/root.pug
+
+include ../../shared/cards/order/index
+include ../../shared/components/advantage/index
+include ../../shared/components/comment/index
+include ../../shared/components/bullet-list/index
+
+block content 
+    div.room-details 
+        div.room-details__images 
+            div.room-details__preview 
+                img(src=require("shared/images/room__1.png").default)
+            div.room-details__images-list
+                div.room-details__img
+                    img(src=require("shared/images/room__2.png").default)
+                div.room-details__img
+                    img(src=require("shared/images/room__3.png").default)
+        div.room-details__main
+            div.room-details__info 
+                div.room-details__row-info 
+                    div.room-details__hand 
+                        h2 Сведения о номере
+                        div.room-details__advantages 
+                            +advantage({
+                                title: "Комфорт",
+                                text: "Шумопоглощающие стены",
+                                src: require("shared/images/smile.svg").default
+                            })
+                            +advantage({
+                                title: "Удобство",
+                                text: "Окно в каждой из спален",
+                                src: require("shared/images/house.svg").default
+                            })
+                            +advantage({
+                                title: "Уют",
+                                text: "Номер оснащён камином",
+                                src: require("shared/images/flame.svg").default
+                            })
+                    div.room-details__hand 
+                        h2 Впечатления от номера
+                div.room-details__row 
+                    div.room-details__double-title 
+                        h2 Отзывы посетителей номера
+                        span 2 отзыва
+                    div.room-details__comments 
+                        div.room-details__comment
+                            +comment({
+                                src: require("shared/images/man.png").default,
+                                name: "Мурад Сарафонов",
+                                date: "5 дней назад",
+                                likes: 12,
+                                liked: true,
+                                text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."
+                            })
+                        div.room-details__comment
+                            +comment({
+                                src: require("shared/images/woman.png").default,
+                                name: "Патрисия Стёклышкова",
+                                date: "Неделю назад",
+                                likes: 2,
+                                liked: false,
+                                text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"
+                            })
+                div.room-details__bullets
+                    div.room-details__bullet-left-hand 
+                        h2.room-details__bullet-title Правила
+                        div.room-details__bullet-list
+                            +bulletList([
+                                {
+                                    title: "Нельзя с питомцами"
+                                },
+                                {
+                                    title: "Без вечеринок и мероприятий"
+                                },
+                                {
+                                    title: "Время прибытия — после 13:00, а выезд до 12:00"
+                                }
+                            ])
+                    div.room-details__bullet-right-hand 
+                        h2 Отмена
+                        span.room-details__bullet-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+            div.room-details__order 
+                div.room-details__order-outer
+                    +order({
+                        number: 888,
+                        isLux: true,
+                        price: 9990,
+                        services: [
+                            {
+                                name: "9 990₽ х 4 суток",
+                                price: 39960
+                            },
+                            {
+                                name: "Сбор за услуги: скидка 2 179₽",
+                                price: 0
+                            },
+                            {
+                                name: "Сбор за дополнительные услуги",
+                                price: 300
+                            }
+                        ],
+                        total: 38081
+                    })
